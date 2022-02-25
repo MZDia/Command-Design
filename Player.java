@@ -79,6 +79,29 @@ public class Player {
      * 
      */
     public void runForward () {
-        ;
+        BufferedReader reader;
+        try {
+            reader = new BufferedReader(new FileReader("jump.txt"));
+            String line = reader.readLine();
+            int i = 0;
+            while (line != null) {
+                if (i == 3) {
+                    i = 0;  // resets i to 0 if 3 lines have been output already
+                    try {
+                        Thread.sleep(1000);  // program sleeps for one second
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.print("\033[H\033[2J");  // ANSI code to clear screen
+                    System.out.flush();  // flushes out remaining bytes
+                } else {
+                    System.out.println(line);
+                    i++;
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
