@@ -58,10 +58,10 @@ public class Player {
             clear();
             Scanner reader = new Scanner(new File("fire.txt"));
             while (reader.hasNextLine()) {
-                for (int i = 0; i < 4; i++) {
+                for (int i = 0; i < 3; i++) {
                     System.out.println(reader.nextLine());
                 }
-                    sleep(100);
+                    sleep(200);
                     clear();
             }
             reader.close();
