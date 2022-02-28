@@ -22,6 +22,11 @@ public class InputHandler {
      * @param button of type String that represents the command; either "jump", "run", "fire", or "quit"
      */
     public void buttonPressed(String button) {
+        button = button.toLowerCase();
+        if(!button.equals("jump") || !button.equals("run") || !button.equals("fire") || !button.equals("quit")) {
+            System.out.println("Invalid Input");
+            return;
+        }
         this.commands.get(button).execute();
     }
 }
