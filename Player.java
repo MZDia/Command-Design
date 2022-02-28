@@ -1,3 +1,4 @@
+import java.util.concurrent.TimeUnit;
 import java.io.*;
 /**
  * 
@@ -11,6 +12,18 @@ public class Player {
       System.out.println("Our hero is born");
     }
 
+    private void sleep(int num) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(num);
+        } catch (Exception e) {
+            System.out.println("Timer error");
+        }
+    }
+    
+    private void clear() {
+        System.out.print("\033[H\033[2J");
+    }
+
     /**
      * Reads text file named "jump.txt", goes through lines in file,
      * and prints out every 6 lines of code before replacing the output
@@ -20,18 +33,13 @@ public class Player {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader("jump.txt"));
-            String line = reader.readLine();
+            String line;
             int i = 1;
-            while (line != null) {
-                if (i == 5) {
+            while ((line = reader.readLine()) != null) {
+                if (i == 6) {
+                    sleep(1000);
+                    clear();
                     i = 1;  // resets i to 1 if 6 lines have been output already
-                    try {
-                        Thread.sleep(1000);  // program sleeps for one second
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.print("\033[H\033[2J");  // ANSI code to clear screen
-                    System.out.flush(); // flushes out remaining bytes
                 } else {
                     System.out.println(line);
                     i++;
@@ -52,18 +60,13 @@ public class Player {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader("fire.txt"));
-            String line = reader.readLine();
+            String line;
             int i = 1;
-            while (line != null) {
+            while ((line = reader.readLine()) != null) {
                 if (i == 3) {
+                    sleep(1000);
+                    clear();
                     i = 1;  // resets i to 1 if 3 lines have been output already
-                    try {
-                        Thread.sleep(1000);  // program sleeps for one second
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.print("\033[H\033[2J");  // ANSI code to clear screen
-                    System.out.flush();  // flushes out remaining bytes
                 } else {
                     System.out.println(line);
                     i++;
@@ -82,18 +85,13 @@ public class Player {
         BufferedReader reader;
         try {
             reader = new BufferedReader(new FileReader("run.txt"));
-            String line = reader.readLine();
+            String line;
             int i = 1;
-            while (line != null) {
+            while ((line = reader.readLine()) != null) {
                 if (i == 3) {
+                    sleep(1000);
+                    clear();
                     i = 1;  // resets i to 1 if 3 lines have been output already
-                    try {
-                        Thread.sleep(1000);  // program sleeps for one second
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.print("\033[H\033[2J");  // ANSI code to clear screen
-                    System.out.flush();  // flushes out remaining bytes
                 } else {
                     System.out.println(line);
                     i++;
