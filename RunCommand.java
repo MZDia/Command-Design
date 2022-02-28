@@ -13,6 +13,7 @@ public class RunCommand implements Command {
     /**
      * Constructor, initializes declared player outside of class to player passed through parameter, then calls execute.
      * @param player
+     */ 
     private Player player;
 
     /**
