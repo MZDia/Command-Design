@@ -3,13 +3,14 @@
  * @author Mark Valentino, Samuel Godfrey
  */
 public class QuitCommand implements Command {
+    private Player player;
     /**
      * 
      * @param player
      */
     public QuitCommand (Player player) {
         this.player = player;
-        exectute();
+        execute();
     }
 
     /**
