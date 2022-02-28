@@ -1,6 +1,6 @@
 /**
  * 
- * @author Mia Dia, Mark Valentino, Samuel Godfrey, Abhinav Myadala
+ * @author Mark Valentino, Samuel Godfrey
  */
 public class QuitCommand implements Command {
     /**
@@ -8,14 +8,15 @@ public class QuitCommand implements Command {
      * @param player
      */
     public QuitCommand (Player player) {
-        //this.player = player;
-        //exectute();
+        this.player = player;
+        exectute();
     }
 
     /**
      * Method to call the quit() method in the player class
      */
     public void execute () {
-        //player.quit();
+        System.out.println("Thanks for Playing!");
+        System.exit(0);
     }
 }
