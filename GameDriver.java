@@ -1,5 +1,3 @@
-//package COMMAND_DESIGN;
-
 import java.util.Scanner;
 
 public class GameDriver {
