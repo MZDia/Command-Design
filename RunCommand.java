@@ -1,6 +1,6 @@
 /**
- * Creates an instance of the Run Commands
- * @author Mia Dia(main) Samuel Godfrey(skeleton) 
+ * Commands player character to run
+ * @author Mia Dia, Mark Valentino, Samuel Godfrey, Abhinav Myadala
  */
 
 public class RunCommand implements Command {
@@ -20,7 +20,7 @@ public class RunCommand implements Command {
     }
 
     /**
-     * Executes the player's run command
+     * Calls run method in class Player for object player.
      */
     public void execute () {
         this.player.runForward();

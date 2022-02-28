@@ -1,7 +1,7 @@
 import java.util.HashMap;
 /**
- * 
- * @author Mia Dia(main)  Samuel Godfrey(skeleton)
+ * Commands player character to jump
+ * @author Mia Dia, Mark Valentino, Samuel Godfrey, Abhinav Myadala
  */
 public class InputHandler {
     private HashMap<String, Command> commands;
