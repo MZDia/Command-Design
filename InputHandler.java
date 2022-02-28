@@ -23,10 +23,10 @@ public class InputHandler {
      */
     public void buttonPressed(String button) {
         button = button.toLowerCase();
-        if(!button.equals("jump") || !button.equals("run") || !button.equals("fire") || !button.equals("quit")) {
-            System.out.println("Invalid Input");
+        if(button.equals("jump") || button.equals("run") || button.equals("fire") || button.equals("quit")) {
+            this.commands.get(button).execute();
             return;
         }
-        this.commands.get(button).execute();
+        System.out.println("Invalid Input");
     }
 }
