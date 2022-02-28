@@ -13,7 +13,6 @@ public class FireCommand implements Command {
      */
     public FireCommand (Player player) {
        this.player = player;
-       execute();
     }
 
     /**

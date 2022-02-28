@@ -15,7 +15,6 @@ public class JumpCommand implements Command {
      */
     public JumpCommand (Player player) {
         this.player = player;
-        execute();
     }
 
     /**
