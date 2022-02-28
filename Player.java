@@ -8,7 +8,7 @@ public class Player {
      * Default constructor
      */
     public Player () {
-        ;
+      System.out.println("Our hero is born");
     }
 
     /**
@@ -81,7 +81,7 @@ public class Player {
     public void runForward () {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("jump.txt"));
+            reader = new BufferedReader(new FileReader("run.txt"));
             String line = reader.readLine();
             int i = 0;
             while (line != null) {
