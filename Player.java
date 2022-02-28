@@ -60,7 +60,6 @@ public class Player {
             String line;
             int i = 1;
             while ((line = reader.readLine()) != null) {
-                for
                 if (i == 3) {
                     sleep(100);
                     clear();
