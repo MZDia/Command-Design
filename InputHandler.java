@@ -1,6 +1,6 @@
 import java.util.HashMap;
 /**
- * Commands player character to jump
+ * Handles input from user and calls a player's method based on input
  * @author Mia Dia, Mark Valentino, Samuel Godfrey, Abhinav Myadala
  */
 public class InputHandler {
