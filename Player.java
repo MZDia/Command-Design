@@ -37,7 +37,7 @@ public class Player {
             int i = 1;
             while ((line = reader.readLine()) != null) {
                 if (i == 6) {
-                    sleep(1000);
+                    sleep(100);
                     clear();
                     i = 1;  // resets i to 1 if 6 lines have been output already
                 } else {
@@ -64,7 +64,7 @@ public class Player {
             int i = 1;
             while ((line = reader.readLine()) != null) {
                 if (i == 3) {
-                    sleep(1000);
+                    sleep(100);
                     clear();
                     i = 1;  // resets i to 1 if 3 lines have been output already
                 } else {
@@ -89,7 +89,7 @@ public class Player {
             int i = 1;
             while ((line = reader.readLine()) != null) {
                 if (i == 3) {
-                    sleep(1000);
+                    sleep(100);
                     clear();
                     i = 1;  // resets i to 1 if 3 lines have been output already
                 } else {
