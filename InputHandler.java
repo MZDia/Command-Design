@@ -4,7 +4,7 @@ import java.util.HashMap;
  * @author Mia Dia, Mark Valentino, Samuel Godfrey, Abhinav Myadala
  */
 public class InputHandler {
-    private HashMap<String, Command> commands;
+    private HashMap<String, Command> commands = new HashMap<String, Command>();
     
     /**
      * Makes a new instance of the inputHandler and populates the hashmap with commands

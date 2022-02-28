@@ -21,10 +21,10 @@ public class Player {
         try {
             reader = new BufferedReader(new FileReader("jump.txt"));
             String line = reader.readLine();
-            int i = 0;
+            int i = 1;
             while (line != null) {
-                if (i == 6) {
-                    i = 0;  // resets i to 0 if 6 lines have been output already
+                if (i == 5) {
+                    i = 1;  // resets i to 1 if 6 lines have been output already
                     try {
                         Thread.sleep(1000);  // program sleeps for one second
                     } catch (InterruptedException e) {
@@ -53,10 +53,10 @@ public class Player {
         try {
             reader = new BufferedReader(new FileReader("fire.txt"));
             String line = reader.readLine();
-            int i = 0;
+            int i = 1;
             while (line != null) {
                 if (i == 3) {
-                    i = 0;  // resets i to 0 if 3 lines have been output already
+                    i = 1;  // resets i to 1 if 3 lines have been output already
                     try {
                         Thread.sleep(1000);  // program sleeps for one second
                     } catch (InterruptedException e) {
@@ -83,10 +83,10 @@ public class Player {
         try {
             reader = new BufferedReader(new FileReader("run.txt"));
             String line = reader.readLine();
-            int i = 0;
+            int i = 1;
             while (line != null) {
                 if (i == 3) {
-                    i = 0;  // resets i to 0 if 3 lines have been output already
+                    i = 1;  // resets i to 1 if 3 lines have been output already
                     try {
                         Thread.sleep(1000);  // program sleeps for one second
                     } catch (InterruptedException e) {

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 //package COMMAND_DESIGN;
 
+=======
+>>>>>>> 6becf66ba6e6752ad89d322ed084ea5c2d561462
 import java.util.Scanner;
 
 public class GameDriver {
