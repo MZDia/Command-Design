@@ -2,7 +2,7 @@ import java.util.concurrent.TimeUnit;
 import java.io.*;
 import java.util.Scanner;
 /**
- * 
+ * An object player that runs it's own Fire, Jump, and Run 'animation'
  * @author Mia Dia, Mark Valentino, Samuel Godfrey, Abhinav Myadala
  */
 public class Player {
@@ -11,18 +11,6 @@ public class Player {
      */
     public Player () {
       System.out.println("Our hero is born");
-    }
-
-    private void sleep(int num) {
-        try {
-            TimeUnit.MILLISECONDS.sleep(num);
-        } catch (Exception e) {
-            System.out.println("Timer error");
-        }
-    }
-    
-    private void clear() {
-        System.out.print("\033[H\033[2J");
     }
 
     /**
@@ -72,27 +60,47 @@ public class Player {
     }
 
     /**
-     * 
+     * Reads text file named "run.txt", goes through lines in file,
+     * and prints out every 3 lines of code before replacing the output
+     * with the next 3 lines every second.
      */
     public void runForward () {
-        BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("run.txt"));
-            String line;
-            int i = 1;
-            while ((line = reader.readLine()) != null) {
-                if (i == 3) {
+            clear();
+            Scanner reader = new Scanner(new File("run.txt"));
+            while (reader.hasNextLine()) {
+                for (int i = 0; i < 3; i++) {
+                    System.out.println(reader.nextLine());
+                }
                     sleep(100);
                     clear();
-                    i = 1;  // resets i to 1 if 3 lines have been output already
-                } else {
-                    System.out.println(line);
-                    i++;
-                }
             }
             reader.close();
+            clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    //Writen By Portia Plante
+    /**
+     * Sleep / Pause the console for a certain number of miliseconds
+     * @param num number of mili seconds to pause
+     */
+    private void sleep(int num) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(num);
+        } catch (Exception e) {
+            System.out.println("Timer error");
+        }
+    }
+    
+     //Writen By Portia Plante
+    /**
+     * clears the console
+     */
+    private void clear() {
+        System.out.print("\033[H\033[2J");
+    }
+
 }
