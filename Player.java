@@ -54,22 +54,18 @@ public class Player {
      * with the next 3 lines every second.
      */
     public void fire () {
-        BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("fire.txt"));
-            String line;
-            int i = 1;
-            while ((line = reader.readLine()) != null) {
-                if (i == 3) {
+            clear();
+            Scanner reader = new Scanner(new File("fire.txt"));
+            while (reader.hasNextLine()) {
+                for (int i = 0; i < 4; i++) {
+                    System.out.println(reader.nextLine());
+                }
                     sleep(100);
                     clear();
-                    i = 1;  // resets i to 1 if 3 lines have been output already
-                } else {
-                    System.out.println(line);
-                    i++;
-                }
             }
             reader.close();
+            clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
